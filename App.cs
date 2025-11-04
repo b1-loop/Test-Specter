@@ -8,11 +8,13 @@ using Test_Specter;
 using Spectre.Console.Rendering;
 using Spectre.Console.Cli;
 using Spectre.Console;
+using System.Linq.Expressions;
 
 namespace Test_Specter
 {
     public static class App
     {
+        
         public static void Run()
     {
         UI.Splash();
@@ -38,6 +40,7 @@ namespace Test_Specter
                     return;
                 }
         }
+        
     }
 
     // -------- Register --------
