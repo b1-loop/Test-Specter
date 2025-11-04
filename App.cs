@@ -21,6 +21,8 @@ namespace Test_Specter
 
             while (true)
             {
+                
+                UI.Splash();
                 var choice = UI.MainMenu();
 
                 if (choice == "Register")
@@ -29,9 +31,16 @@ namespace Test_Specter
                     Login();
                 else if (choice == "Forgot password")
                     ForgotPassword();
-              
+
                 else
+                {
+                    Console.Clear();
+                    UI.Transition("Avslutar...");
+                    AnsiConsole.MarkupLine("[green]Tack för att du använde systemet![/]");
+                    AnsiConsole.MarkupLine("[grey]Ha en fantastisk dag! [/]");
+                    System.Threading.Thread.Sleep(1200);
                     return;
+                }
             }
         }
 
